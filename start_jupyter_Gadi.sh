@@ -3,7 +3,7 @@
 #PBS -P v14
 #PBS -l storage=gdata/v14+scratch/v14+scratch/ux06+gdata/lp01+scratch/lp01+gdata/rr3+scratch/rr3+gdata/hh5+scratch/hh5+gdata/eg3+scratch/eg3+gdata/al33+scratch/al33+gdata/r87+scratch/r87+gdata/zv2+scratch/zv2+gdata/ux62+scratch/ux62
 
-#PBS -q normal
+#PBS -q express
 #PBS -l walltime=02:00:00
 #PBS -l mem=16gb
 #PBS -l ncpus=4
@@ -23,6 +23,8 @@
 #    Dougie Squire
 #    19/08/2020
 # ====================================
+
+export MALLOC_TRIM_THRESHOLD_="0"
 
 if [ ! $# -eq 0 ]; then
     NOTEBOOK_DIR=$1
