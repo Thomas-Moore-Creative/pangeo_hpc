@@ -31,7 +31,7 @@ if (( "$status" != "0" )); then
 fi
 conda deactivate
 conda activate ${PANGEO_ENVIRONMENT}
-echo conda list | grep jupyter 
+echo conda list | grep jupyter
 
 # Start the notebook -----
 echo -e "Starting jupyter notebook..." > $INSTRUCTIONSFILE
@@ -66,7 +66,8 @@ The Jupyter web interface will ask you for your password.
 
 To view the dask dashboard, enter the following into the dask labextension / new browser:
   http://localhost:$PORT/proxy/<dashboard-port>/status
-where <dashboard-port> is the port serving your dashboard (8787 by default)
+where <dashboard-port> is the port serving your dashboard (8787 by default), for example:
+http://localhost:$PORT/proxy/8787/status
 
 Use Control-C to shut down this job...
 "
